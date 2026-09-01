@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .gender {
+            display: flex;
+            gap: 20px;
+        }
+
+        .gender label {
+            font-weight: normal;
+        }
+
+        .gender input {
+            width: auto;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit {
+            background-color: #333;
+            color: white;
+        }
+
+        .reset {
+            background-color: #ddd;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Student Registration Form</h1>
+
+    <form>
+
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter phone number"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input
+                type="date"
+                id="dob"
+                name="dob">
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+
+            <div class="gender">
+                <label>
+                    <input type="radio" name="gender" value="male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="other">
+                    Other
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="course">Select Course</label>
+
+            <select id="course" name="course" required>
+                <option value="">-- Select Course --</option>
+                <option value="bsc">B.Sc Computer Science</option>
+                <option value="bba">BBA</option>
+                <option value="mba">MBA</option>
+                <option value="mca">MCA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+
+            <textarea
+                id="address"
+                name="address"
+                rows="4"
+                placeholder="Enter your address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <input type="checkbox" required>
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <div class="buttons">
+            <button type="submit" class="submit">
+                Register
+            </button>
+
+            <button type="reset" class="reset">
+                Clear
+            </button>
+        </div>
+
+    </form>
+
+    <h2>Registered Students</h2>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Email</th>
+        </tr>
+
+        <tr>
+            <td>101</td>
+            <td>Rahul</td>
+            <td>MCA</td>
+            <td>rahul@example.com</td>
+        </tr>
+
+        <tr>
+            <td>102</td>
+            <td>Priya</td>
+            <td>MBA</td>
+            <td>priya@example.com</td>
+        </tr>
+
+    </table>
+
+</div>
+
+</body>
+</html>
